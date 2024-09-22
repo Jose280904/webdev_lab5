@@ -1,84 +1,48 @@
-<!DOCTYPE html>
+<DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 5 Form</title>
+	<meta charset="utf-8">
+	<title>Document</title>
 </head>
 <body>
-    <h1>Lab 5 Form</h1>
-    
-    <form action="http://bloomingdale.sat.iit.edu/kriedan/lab3formscript.php" method="POST">
-        
-        <!-- Fieldset for Personal Information -->
-        <fieldset>
-            <legend>Personal Information</legend>
-            
-            <label for="first_name_field">First Name:</label>
-            <input type="text" id="first_name_field" name="first_name_field" required><br><br>
-            
-            <label for="last_name_field">Last Name:</label>
-            <input type="text" id="last_name_field" name="last_name_field" required><br><br>
-            
-            <label for="phone_field">Phone Number:</label>
-            <input type="text" id="phone_field" name="phone_field" required><br><br>
-            
-            <label for="email_field">Email:</label>
-            <input type="email" id="email_field" name="email_field" required><br><br>
-            
-        </fieldset>
-
-        <!-- Fieldset for Comments -->
-        <fieldset>
-            <legend>Comments</legend>
-            
-            <label for="comments_field">Comments:</label><br>
-            <textarea id="comments_field" name="comments_field" rows="5" cols="40"></textarea><br><br>
-            
-        </fieldset>
-
-        <!-- Fieldset for Gender and Availability -->
-        <fieldset>
-            <legend>Other Information</legend>
-            
-            <label>Gender:</label><br>
-            <input type="radio" id="male" name="gender_field" value="male">
-            <label for="male">Male</label><br>
-            <input type="radio" id="female" name="gender_field" value="female">
-            <label for="female">Female</label><br>
-            <input type="radio" id="other" name="gender_field" value="other">
-            <label for="other">Other</label><br><br>
-            
-            <label>Availability:</label><br>
-            <input type="checkbox" id="morning" name="available_field[]" value="morning">
-            <label for="morning">Morning</label><br>
-            <input type="checkbox" id="afternoon" name="available_field[]" value="afternoon">
-            <label for="afternoon">Afternoon</label><br>
-            <input type="checkbox" id="evening" name="available_field[]" value="evening">
-            <label for="evening">Evening</label><br><br>
-
-        </fieldset>
-
-        <!-- Drop Down Menu -->
-        <label for="age_field">Age:</label>
-        <select id="age_field" name="age_field">
-            <option value="under_18">Under 18</option>
-            <option value="18-25">18-25</option>
-            <option value="26-35">26-35</option>
-            <option value="36-50">36-50</option>
-            <option value="over_50">Over 50</option>
-        </select><br><br>
-
-        <!-- Hidden Field -->
-        <input type="hidden" name="hidden_field" value="YourNameHere">
-
-        <input type="submit" value="Submit">
-    </form>
-
-    <!-- Hidden Information Section -->
-    <p>This section contains the hidden information:</p>
-    <p><strong>HTML Form created by: Jose Rodriguez</strong></p>
-
+	<h1>Volunteer Form</h1>
+	<form action="http://bloomingdale.sat.iit.edu/kriedan/lab3formscript.php" method="post">
+		<fieldset>
+			<legend>My Info</legend>
+			<div><label>First Name: <input size="100" type="text" name="first_name_field"></label></div>
+			<div><label>Last Name: <input size="100" type="text" name="last_name_field"></label></div>
+			<div><label>Phone Number: <input size="100" type="text" name="phone_field"></label></div>
+			<div><label>Email: <input size="100" type="text" name="email_field"></label></div>
+			<div>Gender:</div>
+			<div>
+				<label>Male <input type="radio" name="gender_field" value="male"></label>
+				<label>Female <input type="radio" name="gender_field" value="female"></label>
+			</div>
+			<div>Age: </div>
+			<select name="age_field">
+				<option>Under 18</option>
+				<option>Over 18</option>
+			</select>
+		</fieldset>
+		<fieldset>
+			<legend>My Availability</legend>
+			<h3>Days Available:</h3>
+			<div>
+				<div><label>Sunday <input type="checkbox" name="available_field[]" value="sunday"></label></div>
+				<div><label>Monday <input type="checkbox" name="available_field[]" value="monday"></label></div>
+				<div><label>Tuesday <input type="checkbox" name="available_field[]" value="tuesday"></label></div>
+				<div><label>Wednesday <input type="checkbox" name="available_field[]" value="wednesday"></label></div>
+				<div><label>Thursday <input type="checkbox" name="available_field[]" value="thursday"></label></div>
+				<div><label>Friday <input type="checkbox" name="available_field[]" value="friday"></label></div>
+				<div><label>Saturday <input type="checkbox" name="available_field[]" value="saturday"></label></div>
+				</h3>Comments:</h3>
+				<textarea name="comments_field"></textarea>
+			</div>
+		</fieldset>
+		<input type="hiden" name="hidden_field" value="Jose Rodriguez">
+		<input type="submit">
+	</form>
 </body>
 </html>
+
 
